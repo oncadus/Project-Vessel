@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlvh7c7rgqct8"]
+
+[ext_resource type="PackedScene" uid="uid://dv01jafbjketh" path="res://turn_manager.tscn" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dtgsc7g4oltks" path="res://icon.svg" id="1_ig7tw"]
+
+[node name="Main" type="Node"]
+
+[node name="TurnManager" parent="." node_paths=PackedStringArray("button1", "button2", "button3") instance=ExtResource("1_0xm2m")]
+button1 = NodePath("../Button1")
+button2 = NodePath("../Button2")
+button3 = NodePath("../Button3")
+
+[node name="Icon" type="Sprite2D" parent="TurnManager"]
+position = Vector2(280, 111)
+texture = ExtResource("1_ig7tw")
+
+[node name="Icon2" type="Sprite2D" parent="TurnManager"]
+position = Vector2(191, 319)
+texture = ExtResource("1_ig7tw")
+
+[node name="Icon3" type="Sprite2D" parent="TurnManager"]
+position = Vector2(98, 542)
+texture = ExtResource("1_ig7tw")
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 506.0
+offset_top = 55.0
+offset_right = 940.0
+offset_bottom = 165.0
+text = "Red"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 568.0
+offset_top = 193.0
+offset_right = 1002.0
+offset_bottom = 303.0
+text = "Blue"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 694.0
+offset_top = 467.0
+offset_right = 1128.0
+offset_bottom = 577.0
+text = "Submit"
